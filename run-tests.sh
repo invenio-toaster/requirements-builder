@@ -9,5 +9,5 @@ pydocstyle requirements_builder && \
 #isort -rc -c -vb -df -sp .isort.cfg **/*.py && \
 check-manifest && \
 sphinx-build -qnNW docs docs/_build/html && \
-python setup.py test && \
+python -m pytest && \
 sphinx-build -qnNW -b doctest docs docs/_build/doctest
